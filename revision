@@ -1,0 +1,34 @@
+int revisarTemperatura(int min, int max){
+  int temperatura = sensorTemperatura.getTemperatura();
+  if (temperatura<min){
+    return -1;
+  }
+  if (temperatura>max){
+    return 1;
+  }
+  return 0;
+  
+}
+
+int revisarPresion(int min, int max){
+  int presion = sensorPressure.getPressure();
+  if (presion<min){
+    return -1;
+  }
+  if (presion>max){
+    return 1;
+  }
+  return 0;
+}
+
+
+int revisarPulso(int min, int max){
+  int pulso = sensorPulso.getPulse();
+  if (pulso<min){
+    return -1;
+  }
+  if (pulso>max){
+    return 1;
+  }
+  return 0;
+}
