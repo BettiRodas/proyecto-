@@ -1,0 +1,12 @@
+int analog_pin = 0; /*lee*/
+float temperatura; /*sensor de temperatura*/
+void setup () {
+  Serial.begin(9600); 
+}
+void loop() {
+  temperatura = analogRead(analog_pin); /*lee*/
+  temperatura = 5.0*temperatura*100.0/1024.0; /*conversion del valor analogico de temperatura*/
+  Serial.print(temperatura); /*imprime la temperatura*/
+  Serial.println(" °C"); /*indica que son grados celsius*/
+  delay(1000); /*realiza la lectura cada segundo*/
+}
